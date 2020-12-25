@@ -13,7 +13,7 @@ email: 1192487554@qq.com
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://q1192487554.github.io
+url: https://q1192487554.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -72,7 +72,7 @@ theme: next
 # 这是提交到github的配置，启用本地服务器，请注释
 deploy:
   type: git
-  repository: git@github.com:dreamingpoet/dreamingpoet.github.io.git
+  repository: git@github.com:q1192487554/q1192487554.github.io.git
   branch: master
   message: 'Daily updated：{{now("YYYY-MM-DD HH:mm:ss")}} by Dreamingpoet personal PC'
 
