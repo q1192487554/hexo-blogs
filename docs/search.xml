@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Git学习总结]]></title>
-      <url>https://q1192487554.github.io/hexo-blogs/2019/10/07/git/</url>
+      <url>https://q1192487554.github.io/2019/10/07/git/</url>
       <content type="html"><![CDATA[<h2 id="git-简介"><a href="#git-简介" class="headerlink" title="git 简介"></a>git 简介</h2><p>git 是分布式的，所以其核心就是分支，分支的意义在于，可以将项目代码按照功能、模块拆分成不同的分支。比如这个产品要加一个支付功能和一个登陆功能，可以创建两个分支，交给不同的开发人员并行开发。登陆功能先开发完，测试无误后合并改分支到 master 分支，master 分支部署上线。支付功能虽然没有开发完成，但是在另一条分支上，所以产品上线和功能开发完全不受影响。这才是分布式开发的高效模式。<br>在 git 中，工作目录下面的所有文件都不外乎这两种状态：<strong>已跟踪</strong>或<strong>未跟踪</strong>。已跟踪的文件是指本来就被纳入版本控制管理的文件，在上次快照中有它们的记录，工作一段时间后，它们的状态可能是未更新，已修改或者已放入暂存区。而所有其他文件都属于未跟踪文件。它们既没有上次更新时的快照，也不在当前的暂存区域。初次克隆某个仓库时，工作目录中的所有文件都属于已跟踪文件，且状态为未修改。</p>
 <a id="more"></a>
 <h2 id="实用指令详解"><a href="#实用指令详解" class="headerlink" title="实用指令详解"></a>实用指令详解</h2><h3 id="merge"><a href="#merge" class="headerlink" title="merge"></a>merge</h3><p>通常，合并分支时，如果可能，Git 会用 Fast froward 模式，但这种模式下，删除分支后，会丢掉分支信息。<br>如果要强制禁用 Fast forward 模式，Git 就会在 merge 时生成一个新的 commit ，这样，从分支历史上就可以看出分支信息。<br><code>git merge --no-ff -m &#39;merge  with no-ff&#39; dev</code><br>因为本次合并要创建一个新的 commit，所以加上 -m 参数，把 commit 描述写进去。</p>
