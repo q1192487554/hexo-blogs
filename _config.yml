@@ -13,7 +13,7 @@ email: 1192487554@qq.com
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://dreamingpoet.github.io
+url: https://q1192487554.github.io/hexo-blogs/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
