@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="Hexo, NexT, dreamingpoet, Dreamingpoet, Blog, Node.js, Git, PHP, JAVA, JAVASCRIPT, HTML, CSS, jQuery, Angular, Vue, React">
+  <meta name="keywords" content="es6,">
 
 
 
@@ -86,16 +86,18 @@
 
 
 
-<meta name="description" content="Don&apos;t look back don&apos;t repent">
-<meta property="og:type" content="website">
-<meta property="og:title" content="本初的个人博客">
-<meta property="og:url" content="https://q1192487554.github.io/index.html">
+<meta name="description" content="本篇文章将简单介绍 es6 基础语法 记录一些比较常用的js语法主要是自己平时复制啊粘贴啊使用。   导入导出123456export const name = &quot;张三&quot;;                          //导出export default const name = &quot;张三&quot;;                  //导出import * as parent from &apos;./mo">
+<meta name="keywords" content="es6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="es6 基本语法">
+<meta property="og:url" content="https://q1192487554.github.io/2021/01/19/es6-Basic/index.html">
 <meta property="og:site_name" content="本初的个人博客">
-<meta property="og:description" content="Don&apos;t look back don&apos;t repent">
+<meta property="og:description" content="本篇文章将简单介绍 es6 基础语法 记录一些比较常用的js语法主要是自己平时复制啊粘贴啊使用。   导入导出123456export const name = &quot;张三&quot;;                          //导出export default const name = &quot;张三&quot;;                  //导出import * as parent from &apos;./mo">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-01-19T04:10:55.934Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="本初的个人博客">
-<meta name="twitter:description" content="Don&apos;t look back don&apos;t repent">
+<meta name="twitter:title" content="es6 基本语法">
+<meta name="twitter:description" content="本篇文章将简单介绍 es6 基础语法 记录一些比较常用的js语法主要是自己平时复制啊粘贴啊使用。   导入导出123456export const name = &quot;张三&quot;;                          //导出export default const name = &quot;张三&quot;;                  //导出import * as parent from &apos;./mo">
 
 
 
@@ -116,12 +118,12 @@
 
 
 
-  <link rel="canonical" href="https://q1192487554.github.io/">
+  <link rel="canonical" href="https://q1192487554.github.io/2021/01/19/es6-Basic/">
 
 
 <!-- 网页加载条 -->
 <script src="/js/src/pace.min.js"></script>
-  <title> 本初的个人博客 </title>
+  <title> es6 基本语法 | 本初的个人博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -142,9 +144,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,9 +265,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -287,10 +287,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2021/01/19/es6-Basic/" itemprop="url">
-                  es6 基本语法
-                </a>
+                es6 基本语法
               
             
           </h1>
@@ -336,6 +333,9 @@
           
 
           
+             
+              
+          
         </div>
       </header>
     
@@ -347,12 +347,7 @@
       
 
       
-<!-- 自定义，用于添加摘要图片，文章中不显示 -->
-        
-<!-- 自定义结束 -->
-        
-          
-            <p>本篇文章将简单介绍 es6 基础语法</p>
+        <p>本篇文章将简单介绍 es6 基础语法</p>
 <p id="div-border-left-green">记录一些比较常用的js语法主要是自己平时复制啊粘贴啊使用。</p>
 
 
@@ -368,157 +363,110 @@
 <h2 id="Object-assign-用法"><a href="#Object-assign-用法" class="headerlink" title="Object.assign()用法"></a>Object.assign()用法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//*  为对象添加属性</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(x, y) &#123;</span><br><span class="line">        <span class="built_in">Object</span>.assign(<span class="keyword">this</span>, &#123; x, y &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//*  为对象添加方法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SomeClass</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="built_in">Object</span>.assign(SomeClass.prototype, &#123;</span><br><span class="line">    someMethod(arg1, arg2) &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;,</span><br><span class="line">    anotherMethod() &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">set</span>= new Set()</span><br><span class="line"><span class="keyword">set</span>.add(value)                              //给集合内添加某个元素</span><br><span class="line"><span class="keyword">set</span>.remove(value)                           //移除集合中某个元素</span><br><span class="line"><span class="keyword">set</span>.clear(value)                            //清空集合</span><br><span class="line"><span class="keyword">set</span>.has(value)                              //检测集合内是否有某个元素</span><br><span class="line"><span class="keyword">set</span>.size()                                  //返回集合长度</span><br><span class="line"><span class="keyword">set</span>.values()                                //返回键值的遍历器</span><br><span class="line"><span class="keyword">set</span>.keys()                                  //返回键名的遍历器</span><br><span class="line"><span class="keyword">set</span>.entries()                               //返回键值对的遍历器</span><br><span class="line"><span class="keyword">set</span>.<span class="keyword">constructor</span>                             //构造函数，默认就是Set函数。</span><br></pre></td></tr></table></figure>
 <h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">m.set(<span class="string">'Adam'</span>, <span class="number">67</span>)                           <span class="comment">//添加新的key-value</span></span><br><span class="line">m.has(<span class="string">'Adam'</span>)                               <span class="comment">//是否存在key 'Adam': true</span></span><br><span class="line">m.get(<span class="string">'Adam'</span>)                               <span class="comment">//输出</span></span><br><span class="line">m.delete(<span class="string">'Adam'</span>)                            <span class="comment">//删除</span></span><br><span class="line">m.keys()                                    <span class="comment">//返回所有key</span></span><br><span class="line">m.values()                                  <span class="comment">//返回所有value</span></span><br><span class="line"></span><br><span class="line">m.forEach(<span class="function">(<span class="params">value, key</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;key&#125;</span>=<span class="subst">$&#123;value&#125;</span>`</span>)            <span class="comment">//遍历map</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> x <span class="keyword">of</span> m)                            <span class="comment">//其实map就是一个二维数组而已</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> [key, value] <span class="keyword">of</span> map) 			   </span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> [, value] <span class="keyword">of</span> map)</span><br></pre></td></tr></table></figure>
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
+<blockquote class="blockquote-center" style="color: #ccc;">
+    -------------本文结束 <i class="fa fa-apple"></i> 感谢您的阅读-------------
+</blockquote>
+
+  <span id="inline-green" style="border-radius:3px;">作者</span>：<a class="link-blue" href="https://gitee.com/meng19970630" target="_blank">本初</a><br>有问题请发邮箱 <a class="link-blue" href target="_blank">1192487554@qq.com</a>。
+
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>满分是10分的话，这篇文章你给几分</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/reward/reward_wechat.png" alt="本初 WeChat Pay">
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/reward/reward_alipay.png" alt="本初 Alipay">
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2020/11/17/UE4-Config/" itemprop="url">
-                  UE4 Config配置文件的使用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2020-11-17T08:54:11+08:00" content="2020-11-17">
-              2020-11-17
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/UE4/" itemprop="url" rel="index">
-                    <span itemprop="name">UE4</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-
-          
-
-          
-          
-
+            <a href="/tags/es6/" rel="tag"><i class="fa fa-tag"></i> es6</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-<!-- 自定义，用于添加摘要图片，文章中不显示 -->
-        
-<!-- 自定义结束 -->
-        
-          <p>本篇文章将简单介绍UE4 项目开发过程中, 如何使用配置文件来修改项目中的参数</p>
-<p id="div-border-left-green">我们知道在UE4项目的根目录下都会有一个 Config 的文件夹,里面有各种.ini 结尾的文件,这里面都是UE4 默认生成的一些配置文件. 今天我们要做的就是使用自己定义的.ini 文件,定义自己的 Config 变量, 并用这些变量来初始化 Class 中的定义的成员变量.</p>
-
-
-<h4 id="1-关于打包后Config文件的位置"><a href="#1-关于打包后Config文件的位置" class="headerlink" title="1.关于打包后Config文件的位置"></a>1.关于打包后Config文件的位置</h4><p>如果采用Development 或者DebugGame 模式打包的话, Config 文件会生成在 <code>打包目录\项目名称\Saved\Config\WindowsNoEditor</code> 目录中, 但是如果用Shipping 模式打包的话, 会发现找不到这个目录了, 那么在Windows 系统下 我们可以在如下地址找到 <code>C:\Users\用户名\AppData\Local\项目名称\Saved\Config\WindowsNoEditor</code>.<br>接下来也会把我们自己的 Config 文件生成在指定的目录下,方便找到和修改.</p>
-<h4 id="2-把成员变量设置为可用Config-配置"><a href="#2-把成员变量设置为可用Config-配置" class="headerlink" title="2. 把成员变量设置为可用Config 配置"></a>2. 把成员变量设置为可用Config 配置</h4><p>在UE4 c++ Class 变量的宏定义中, 加入 <code>config</code> 关键字<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 是否作为服务器启动</span></span><br><span class="line">UPROPERTY(config ,Category=<span class="string">"CustomIni"</span>)</span><br><span class="line"><span class="keyword">bool</span> bServer=<span class="literal">false</span>;</span><br></pre></td></tr></table></figure></p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2020/11/17/UE4-Config/" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/11/17/UE4-Config/" rel="next" title="UE4 Config配置文件的使用">
+                <i class="fa fa-chevron-left"></i> UE4 Config配置文件的使用
+              </a>
+            
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -544,8 +492,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/avatar/avatar.jpg" alt="本初">
           <p class="site-author-name" itemprop="name">本初</p>
@@ -647,6 +604,17 @@
         
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#导入导出"><span class="nav-number">1.</span> <span class="nav-text">导入导出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组"><span class="nav-number">2.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#箭头函数"><span class="nav-number">3.</span> <span class="nav-text">箭头函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数几种调用形式"><span class="nav-number">4.</span> <span class="nav-text">函数几种调用形式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Generator-函数"><span class="nav-number">5.</span> <span class="nav-text">Generator 函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Promise-对象"><span class="nav-number">6.</span> <span class="nav-text">Promise 对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象"><span class="nav-number">7.</span> <span class="nav-text">对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#class"><span class="nav-number">8.</span> <span class="nav-text">class</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象冒充继承-以及结合-protytype继承"><span class="nav-number">9.</span> <span class="nav-text">对象冒充继承  以及结合 protytype继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-assign-用法"><span class="nav-number">10.</span> <span class="nav-text">Object.assign()用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set"><span class="nav-number">11.</span> <span class="nav-text">Set</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map"><span class="nav-number">12.</span> <span class="nav-text">Map</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -764,6 +732,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
